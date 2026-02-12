@@ -1,13 +1,36 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: 'Varela Round', sans-serif;
+    font-family: 'Georgia', serif;
     box-sizing: border-box;
 }
 
 body {
-    color: #333;
+    color: #3c845f;
     background-color: #deffdd;
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     max-width: 100%;
+}
+
+.navigation-bar {
+    position: relative;
+    top: 1rem;
+    text-align: center;
+}
+
+.navigation-bar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.navigation-bar li {
+    margin: 0 1rem;
+    display: inline-block;
+}
+
+.navigation-bar a {
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
 }
