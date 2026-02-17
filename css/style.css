@@ -10,6 +10,40 @@ body {
     background-color: #c8e6c9;
     font-size: 1.5rem;
     max-width: 100%;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark-theme {
+    color: #c5e1c5;
+    background-color: #132a13;
+}
+
+.theme-toggle {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    border: none;
+    background: #1b5e20;
+    color: #c8e6c9;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    z-index: 100;
+    transition: background 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+
+body.dark-theme .theme-toggle {
+    background: #5a9f5a;
+    color: #132a13;
+}
+
+.theme-toggle:hover {
+    transform: scale(1.08);
 }
 
 .navigation-bar {
@@ -33,8 +67,22 @@ body {
     text-decoration: none;
     padding: 10px 15px;
     display: block;
-}  
-    
+    color: #1b5e20;
+    transition: color 0.3s ease;
+}
+
+.navigation-bar a:link,
+.navigation-bar a:visited {
+    color: #1b5e20;
+    text-decoration: none;
+}
+
+body.dark-theme .navigation-bar a,
+body.dark-theme .navigation-bar a:link,
+body.dark-theme .navigation-bar a:visited {
+    color: #a8d8a8;
+}
+
 .social-buttons {
     position: relative;
     top: 80%;
@@ -68,4 +116,10 @@ body {
 .social-buttons ul li a:link,
 .social-buttons ul li a:visited {
     color: #1b5e20;
+}
+
+body.dark-theme .social-buttons ul li a, 
+body.dark-theme .social-buttons ul li a:link,
+body.dark-theme .social-buttons ul li a:visited {
+    color: #a8d8a8;
 }
