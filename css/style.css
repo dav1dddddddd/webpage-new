@@ -20,10 +20,10 @@ body.dark-theme {
 
 .theme-toggle {
     position: fixed;
-    top: 1rem;
-    right: 1rem;
-    width: 2.5rem;
-    height: 2.5rem;
+    top: 1.5rem;
+    right: 1.5rem;
+    width: 3.5rem;
+    height: 3.5rem;
     border-radius: 50%;
     border: none;
     background: #1b5e20;
@@ -32,7 +32,7 @@ body.dark-theme {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.2rem;
+    font-size: 2rem;
     z-index: 100;
     transition: background 0.3s ease, color 0.3s ease, transform 0.2s ease;
 }
@@ -85,7 +85,7 @@ body.dark-theme .navigation-bar a:visited {
 
 .social-buttons {
     position: relative;
-    top: 80%;
+    top: 85%;
     text-align: center;
     display: flex;
     justify-content: center;
