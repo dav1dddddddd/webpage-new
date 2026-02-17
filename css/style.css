@@ -6,8 +6,8 @@
 }
 
 body {
-    color: #3c845f;
-    background-color: #deffdd;
+    color: #1b5e20;
+    background-color: #c8e6c9;
     font-size: 1.5rem;
     max-width: 100%;
 }
@@ -33,4 +33,39 @@ body {
     text-decoration: none;
     padding: 10px 15px;
     display: block;
+}  
+    
+.social-buttons {
+    position: relative;
+    top: 80%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-buttons ul {
+    display: flex;
+}
+
+.social-buttons ul i {
+    position: relative;
+    top: 0.4rem;
+    font-size: 1.15rem;
+}
+
+.social-buttons ul li {
+    list-style: none;
+    margin: 0 1rem;
+}
+
+.social-buttons ul li a {
+    text-decoration: none;
+    color: #1b5e20;
+    transition: color 0.3s ease;
+}
+
+.social-buttons ul li a:link,
+.social-buttons ul li a:visited {
+    color: #1b5e20;
 }
