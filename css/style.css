@@ -63,6 +63,10 @@ body.dark-theme .theme-toggle {
     display: inline-block;
 }
 
+.navigation-bar li a:hover {
+    color: #44c24c;
+}
+
 .navigation-bar a {
     text-decoration: none;
     padding: 10px 15px;
@@ -81,6 +85,10 @@ body.dark-theme .navigation-bar a,
 body.dark-theme .navigation-bar a:link,
 body.dark-theme .navigation-bar a:visited {
     color: #a8d8a8;
+}
+
+body.dark-theme .navigation-bar li a:hover {
+    color: #44c24c;
 }
 
 .social-buttons {
