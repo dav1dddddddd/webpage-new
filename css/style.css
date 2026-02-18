@@ -126,8 +126,53 @@ body.dark-theme .navigation-bar li a:hover {
     color: #1b5e20;
 }
 
-body.dark-theme .social-buttons ul li a, 
+.social-buttons ul li:nth-child(1) a:hover {
+    color: #0090de;
+}
+
+.social-buttons ul li:nth-child(3) a:hover {
+    color: #a9a9a9;
+}
+
+.social-buttons ul li:nth-child(5) a {
+    background-size: 100% 200%;
+    background-position: center 0%;
+    transition: background-position 0.3s ease;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: linear-gradient(to bottom, #1b5e20 0%, #1b5e20 50%, #f9ce34 50%, #ee2a7b 75%, #6228d7 100%);
+}
+
+.social-buttons ul li:nth-child(5) a:hover {
+    background-position: center 100%;
+}
+
+body.dark-theme .social-buttons ul li:nth-child(1) a,
+body.dark-theme .social-buttons ul li:nth-child(3) a, 
 body.dark-theme .social-buttons ul li a:link,
 body.dark-theme .social-buttons ul li a:visited {
     color: #a8d8a8;
+}
+
+body.dark-theme .social-buttons ul li:nth-child(5) a {
+    background-size: 100% 200%;
+    background-position: center 0%;
+    transition: background-position 0.3s ease;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: linear-gradient(to bottom, #a8d8a8 0%, #a8d8a8 50%, #f9ce34 50%, #ee2a7b 75%, #6228d7 100%);
+}
+
+body.dark-theme .social-buttons ul li:nth-child(1) a:hover {
+    color: #0090de;
+}
+
+body.dark-theme .social-buttons ul li:nth-child(3) a:hover {
+    color: #a9a9a9;
+}
+
+body.dark-theme .social-buttons ul li:nth-child(5) a:hover {
+    background-position: center 100%;
 }
