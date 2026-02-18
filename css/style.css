@@ -91,13 +91,47 @@ body.dark-theme .navigation-bar li a:hover {
     color: #44c24c;
 }
 
-.social-buttons {
+.profile {
+    position: fixed;
+    border-radius: 15rem;
+    left: 17rem;
+    bottom: 10rem;
+    width: 22.5rem;
+    transition: color 0.3s ease;
+    border: 4px solid #1b5e20;
+    box-shadow: 0 8px 24px rgba(27, 94, 32, 0.35);
+    z-index: 10;
+}
+
+body.dark-theme .profile {
+    border-color: #a8d8a8;
+    box-shadow: 0 8px 24px rgba(197, 225, 197, 0.25);
+}
+
+.description {
     position: relative;
-    top: 85%;
+    left: 10rem;
+    top: 11rem;
+    font-size : 1.5rem;
+    text-align: center;
+}
+
+.description h2 {
+    position: relative;
+    top: 5rem;
+}
+
+.social-buttons {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 50;
     text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
+padding: 1rem 0 1.25rem;
 }
 
 .social-buttons ul {
