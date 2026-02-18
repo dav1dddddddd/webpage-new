@@ -101,7 +101,7 @@ body.dark-theme .navigation-bar li a:hover {
 .profile {
     position: fixed;
     border-radius: 15rem;
-    left: 52.5%;
+    right: 26%;
     top: 32.5%;
     width: clamp(14rem, 22vw, 32.5rem);
     transform: translate(-140%, -10%);
@@ -137,27 +137,44 @@ body.dark-theme .dark-scroll {
 }
 
 .description {
-    position: relative;
+    position: fixed;
     min-height: 30vh;
-    max-height: 75vh;
-    max-width: 60vh;
+    max-height: 35vh;
     overflow-y: auto;
-    left: 45%;
+    right: 27.5%;
     top: 50%;
     transform: translate(10%, -50%);
     font-size: clamp(0.25rem, 4vw, 1.75rem);
     text-align: center;
+    z-index: 1;
+}
+
+.description h1 {
+    max-width: 60vh;
 }
 
 .description h2 {
+    max-width: 60vh;
     position: relative;
     font-size: clamp(1rem, 2.25vw, 2.75rem);
     top: 5rem;
 }
 
 .description h3 {
+    max-width: 60vh;
     position: relative;
     top: 10rem;
+}
+
+.description a,
+.description a:visited {
+    color: #b36969;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.description a:hover {
+    color: #ec8787;
 }
 
 .social-buttons {
