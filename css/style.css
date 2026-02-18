@@ -5,6 +5,10 @@
     box-sizing: border-box;
 }
 
+::-webkit-scrollbar {
+    display: none;
+}
+
 body {
     color: #1b5e20;
     background-color: #c8e6c9;
@@ -128,6 +132,11 @@ body.dark-theme .profile {
     position: relative;
     font-size: clamp(1rem, 2.25vw, 2.75rem);
     top: 5rem;
+}
+
+.description h3 {
+    position: relative;
+    top: 10rem;
 }
 
 .social-buttons {
