@@ -115,6 +115,27 @@ body.dark-theme .profile {
     box-shadow: 0 8px 24px rgba(197, 225, 197, 0.25);
 }
 
+.dark-scroll,
+.light-scroll {
+    width: clamp(14rem, 18vw, 22.5rem);
+    position: fixed;
+    right: 20vh;
+    top: 40%;
+    z-index: 0;
+}
+
+.dark-scroll {
+    display: none;
+}
+
+body.dark-theme .light-scroll {
+    display: none;
+}
+
+body.dark-theme .dark-scroll {
+    display: block;
+}
+
 .description {
     position: relative;
     min-height: 30vh;
