@@ -53,6 +53,34 @@ body.dark-theme .theme-toggle {
     transform: scale(1.08);
 }
 
+.message {
+    position: fixed;
+    top: 1.5rem;
+    right: 6rem;
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+    border: none;
+    background: var(--toggle-bg);
+    color: var(--toggle-fg);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    z-index: 100;
+    transition: background 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+
+body.dark-theme .message {
+    background: var(--toggle-bg);
+    color: var(--toggle-fg);
+}
+
+.message:hover {
+    transform: scale(1.08);
+}
+
 .navigation-bar {
     position: relative;
     top: 1rem;
