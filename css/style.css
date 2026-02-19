@@ -223,6 +223,33 @@ body.dark-theme .dark-scroll {
     color: #ff9494;
 }
 
+.reveal {
+    opacity: 0;
+    transform: translateY(14px);
+    filter: blur(2px);
+    transition: opacity 0.65s ease, transform 650ms ease, filter 650ms ease;
+    will-change: opacity, transform, filter;
+  }
+
+  .reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+
+  .reveal-stagger .reveal {
+    transition-delay: calc(var(--i, 0) * 120ms);
+  }
+  
+  @media (prefers-reduced-motion: reduce) {
+    .reveal {
+      opacity: 1 !important;
+      transform: none !important;
+      filter: none !important;
+      transition: none !important;
+    }
+  }
+
 .social-buttons {
     position: fixed;
     bottom: 0;
