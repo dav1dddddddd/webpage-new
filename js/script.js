@@ -107,6 +107,32 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     ];
 
+    function initReveal() {
+        const revealEls = document.querySelectorAll('.reveal');
+  
+        document.querySelectorAll('.reveal-stagger').forEach(group => {
+            group.querySelectorAll('.reveal').forEach((el, idx) => {
+                el.style.setProperty('--i', idx);
+            });
+        });
+  
+        if (!('IntersectionObserver' in window)) {
+            revealEls.forEach(el => el.classList.add('is-visible'));
+            return;
+        }
+  
+        const io = new IntersectionObserver((entries, obs) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    obs.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.15, rootMargin: '0px 0px -10% 0px' });
+  
+        revealEls.forEach(el => io.observe(el));
+    }
+
     function safeSetLocalStorage(key, value) {
         try { localStorage.setItem(key, value); } catch (e) {}
     }
@@ -200,6 +226,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
+    initReveal();
     renderSwatches();
     initTheme();
     applyThemeVars();
