@@ -8,5 +8,6 @@ i'm excited to breathe more life into an old project&nbsp;
 # recently finished ✔️
 - navigation bar&nbsp;
 - theme toggle&nbsp;
-- socials&nbsp;
-- home description
+- mail button&nbsp;
+- home description&nbsp;
+- palette toggle
