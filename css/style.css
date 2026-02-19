@@ -9,9 +9,26 @@
     display: none;
 }
 
+
+:root {
+    --bg: #c8e6c9;
+    --text: #1b5e20;
+    --muted-text: rgba(27, 94, 32, 0.75);
+    --accent: #44c24c;
+    --toggle-bg: #1b5e20;
+    --toggle-fg: #c8e6c9;
+    --border: #1b5e20;
+    --shadow: rgba(27, 94, 32, 0.35);
+}
+
+.dark-scroll { display: none; }
+body.dark-theme .light-scroll { display: none; }
+body.dark-theme .dark-scroll { display: block; }
+
+
 body {
-    color: #1b5e20;
-    background-color: #c8e6c9;
+    color: var(--text);
+    background-color: var(--bg);
     font-size: clamp(0.25rem, 1.4vw, 1.75rem);
     max-width: 100%;
     max-height: 100%;
@@ -21,8 +38,8 @@ body {
 }
 
 body.dark-theme {
-    color: #c5e1c5;
-    background-color: #132a13;
+    color: var(--text);
+    background-color: var(--bg);
 }
 
 .theme-toggle {
@@ -33,8 +50,8 @@ body.dark-theme {
     height: 3.5rem;
     border-radius: 50%;
     border: none;
-    background: #1b5e20;
-    color: #c8e6c9;
+    background: var(--toggle-bg);
+    color: var(--toggle-fg);
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -45,8 +62,8 @@ body.dark-theme {
 }
 
 body.dark-theme .theme-toggle {
-    background: #5a9f5a;
-    color: #132a13;
+    background: var(--toggle-bg);
+    color: var(--toggle-fg);
 }
 
 .theme-toggle:hover {
@@ -99,31 +116,31 @@ body.dark-theme .message {
 }
 
 .navigation-bar li a:hover {
-    color: #44c24c;
+    color: var(--accent);
 }
 
 .navigation-bar a {
     text-decoration: none;
     padding: 10px 15px;
     display: block;
-    color: #1b5e20;
+    color: var(--text);
     transition: color 0.3s ease;
 }
 
 .navigation-bar a:link,
 .navigation-bar a:visited {
-    color: #1b5e20;
+    color: var(--text);
     text-decoration: none;
 }
 
 body.dark-theme .navigation-bar a,
 body.dark-theme .navigation-bar a:link,
 body.dark-theme .navigation-bar a:visited {
-    color: #a8d8a8;
+    color: var(--text);
 }
 
 body.dark-theme .navigation-bar li a:hover {
-    color: #44c24c;
+    color: var(--accent);
 }
 
 .profile {
@@ -134,8 +151,8 @@ body.dark-theme .navigation-bar li a:hover {
     width: clamp(14rem, 22vw, 32.5rem);
     transform: translate(-140%, -10%);
     transition: color 0.3s ease;
-    border: 4px solid #1b5e20;
-    box-shadow: 0 8px 24px rgba(27, 94, 32, 0.35);
+    border: 4px solid var(--border);
+    box-shadow: 0 8px 24px var(--shadow);
 }
 
 body.dark-theme .profile {
@@ -162,6 +179,7 @@ body.dark-theme .light-scroll {
 
 body.dark-theme .dark-scroll {
     display: block;
+    box-shadow: 0 8px 24px var(--shadow);
 }
 
 .description {
@@ -235,13 +253,13 @@ body.dark-theme .dark-scroll {
 
 .social-buttons ul li a {
     text-decoration: none;
-    color: #1b5e20;
+    color: var(--text);
     transition: color 0.3s ease;
 }
 
 .social-buttons ul li a:link,
 .social-buttons ul li a:visited {
-    color: #1b5e20;
+    color: var(--text);
 }
 
 .social-buttons ul li:nth-child(1) a:hover {
@@ -259,7 +277,7 @@ body.dark-theme .dark-scroll {
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
-    background-image: linear-gradient(to bottom, #1b5e20 0%, #1b5e20 50%, #f9ce34 50%, #ee2a7b 75%, #6228d7 100%);
+    background-image: linear-gradient(to bottom, var(--text) 0%, var(--text) 50%, #f9ce34 50%, #ee2a7b 75%, #6228d7 100%);
 }
 
 .social-buttons ul li:nth-child(5) a:hover {
@@ -270,7 +288,7 @@ body.dark-theme .social-buttons ul li:nth-child(1) a,
 body.dark-theme .social-buttons ul li:nth-child(3) a, 
 body.dark-theme .social-buttons ul li a:link,
 body.dark-theme .social-buttons ul li a:visited {
-    color: #a8d8a8;
+    color: var(--text);
 }
 
 body.dark-theme .social-buttons ul li:nth-child(5) a {
@@ -279,7 +297,7 @@ body.dark-theme .social-buttons ul li:nth-child(5) a {
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
-    background-image: linear-gradient(to bottom, #a8d8a8 0%, #a8d8a8 50%, #f9ce34 50%, #ee2a7b 75%, #6228d7 100%);
+    background-image: linear-gradient(to bottom, var(--text) 0%, var(--text) 50%, #f9ce34 50%, #ee2a7b 75%, #6228d7 100%);
 }
 
 body.dark-theme .social-buttons ul li:nth-child(1) a:hover {
@@ -292,4 +310,101 @@ body.dark-theme .social-buttons ul li:nth-child(3) a:hover {
 
 body.dark-theme .social-buttons ul li:nth-child(5) a:hover {
     background-position: center 100%;
+}
+
+.palette-toggle {
+    position: fixed;
+    top: 1.5rem;
+    left: 1.5rem;
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+    border: none;
+    background: var(--toggle-bg);
+    color: var(--toggle-fg);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.7rem;
+    z-index: 101;
+    transition: transform 0.2s ease, background 0.3s ease, color 0.3s ease;
+}
+
+.palette-toggle:hover { transform: scale(1.08); }
+
+.palette-panel {
+    position: fixed;
+    left: 1.25rem;
+    top: 5.75rem;
+    width: 15.5rem;
+    max-height: 5rem;
+    border-radius: 1.25rem;
+    padding: 0.25rem 0.9rem 0.8rem;
+    backdrop-filter: blur(10px);
+    background: var(--toggle-bg);
+    border: 1px solid rgba(0, 0, 0, 0.539);
+    z-index: 101;
+    transform: translateX(calc(-100% - 1.5rem));
+    transition: transform 0.25s ease;
+}
+
+body.dark-theme .palette-panel {
+    background: var(--toggle-bg);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.palette-panel.open {
+    transform: translateX(0);
+}
+
+.palette-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.75rem;
+}
+
+.palette-swatches {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.65rem;
+    margin-bottom: 0.6rem;
+}
+
+.palette-swatch {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    border-radius: 0.85rem;
+    border: 2px solid rgba(0, 0, 0, 0.08);
+    cursor: pointer;
+    position: relative;
+    transition: transform 0.15s ease, border-color 0.3s ease;
+}
+
+body.dark-theme .palette-swatch {
+    border-color: rgba(255, 255, 255, 0.14);
+}
+
+.palette-swatch:hover { transform: translateY(-2px); }
+
+.palette-swatch.active::after {
+    content: "";
+    position: absolute;
+    inset: 0rem;
+    border-radius: 0.85rem;
+    border: 3px solid #707070;
+    opacity: 0.95;
+}
+
+.palette-hint {
+    font-size: 0.9rem;
+    color: var(--muted-text);
+    line-height: 1.1;
+}
+
+@media (max-width: 720px) {
+    .palette-panel {
+        width: 13.5rem;
+    }
 }
