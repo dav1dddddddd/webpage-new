@@ -403,6 +403,7 @@ body.dark-theme .palette-swatch {
     line-height: 1.1;
 }
 
+
 @media (max-width: 720px) {
     .palette-panel {
         width: 13.5rem;
