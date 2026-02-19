@@ -190,7 +190,7 @@ body.dark-theme .dark-scroll {
     right: 27.5%;
     top: 50%;
     transform: translate(10%, -50%);
-    font-size: clamp(0.25rem, 4vw, 1.75rem);
+    font-size: clamp(1rem, 1.5vw, 1.75rem);
     text-align: center;
     z-index: 1;
 }
