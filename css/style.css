@@ -214,13 +214,13 @@ body.dark-theme .dark-scroll {
 
 .description a,
 .description a:visited {
-    color: #b36969;
+    color: #ce7575;
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
 .description a:hover {
-    color: #ec8787;
+    color: #ce7575;
 }
 
 .social-buttons {
