@@ -156,7 +156,7 @@ body.dark-theme .navigation-bar li a:hover {
 }
 
 body.dark-theme .profile {
-    border-color: #a8d8a8;
+    border-color: var(--text);
     box-shadow: 0 8px 24px rgba(197, 225, 197, 0.25);
 }
 
