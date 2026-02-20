@@ -1,0 +1,115 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="david lim's personal website">
+    <link rel="stylesheet" href="css/projects.css">
+    <script src="https://kit.fontawesome.com/707024b310.js" crossorigin="anonymous"></script>
+    <title>david lim</title>
+</head>
+<body>
+    <button class="palette-toggle" id="paletteToggle">
+        <i class="fa-solid fa-palette"></i>
+    </button>
+    <aside class="palette-panel" id="palettePanel">
+        <div class="palette-header">
+        </div>
+        <div class="palette-swatches" id="paletteSwatches"></div>
+    </aside>
+    <button class="theme-toggle" id="themeToggle">
+        <i class="fa-solid fa-moon" id="themeIcon"></i>
+    </button>
+    <a href="mailto:contact@davidhopelim.com">
+        <button class="message" id="messageButton">
+            <i class="fa-solid fa-comment-dots"></i>
+        </button>
+    </a>
+    <div class="navigation-bar">
+        <nav>
+            <ul id="tab-list">
+                <li><a href="index.html">home</a></li>
+                <li><a href="projects.html">projects</a></li>
+                <li><a href="blog.html">blog</a></li>
+            </ul>
+        </nav>
+    </div>
+    <section class="projects" id="projects">
+      <header class="projects-header reveal">
+        <p>a few things i've built or worked on recently.</p>
+      </header>
+      <div class="projects-grid reveal-stagger">
+        <article class="project-card reveal">
+          <div class="project-top">
+            <h2>Diagnostic System</h2>
+            <span class="project-year">2024</span>
+          </div>
+          <p class="project-desc">
+            ROS2 service call system that communicates status to other modules when needed.
+          </p>
+          <div class="project-tags">
+            <span>ROS2</span><span>Nodes</span><span>C++</span><span>Python</span><span>Services</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/dav1dddddddd/navigator/tree/dev" target="_blank">source code ↗</a>
+          </div>
+        </article>
+        <article class="project-card reveal">
+          <div class="project-top">
+            <h2>SSP Adapters</h2>
+            <span class="project-year">2025 - present</span>
+          </div>
+          <p class="project-desc">
+            Adapters that filter & read different API requests to produce readable data reports.
+          </p>
+          <div class="project-tags">
+            <span>Tokens</span><span>Polars</span><span>Python</span><span>API</span>
+          </div>
+          <div class="project-links">
+            <a href="#" target="_blank">available on CV ↗</a>
+          </div>
+        </article>
+        <article class="project-card reveal">
+          <div class="project-top">
+            <h2>Amazon Delivery Tracker</h2>
+            <span class="project-year">2024</span>
+          </div>
+          <p class="project-desc">
+            Prime-style delivery tracker with instant searching, route validation, & more.
+          </p>
+          <div class="project-tags">
+            <span>Graphs</span><span>Hash tables</span><span>Java</span><span>Data structures</span>
+          </div>
+          <div class="project-links">
+            <a href="#" target="_blank">available on CV ↗</a>
+          </div>
+        </article>
+        <article class="project-card reveal">
+          <div class="project-top">
+            <h2>Personal Website</h2>
+            <span class="project-year">2026</span>
+          </div>
+          <p class="project-desc">
+            A revamped version of my old website. simpler. friendlier. better.
+          </p>
+          <div class="project-tags">
+            <span>HTML</span><span>CSS</span><span>JavaScript</span><span>UI/UX</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/dav1dddddddd/webpage-new" target="_blank">github ↗</a>
+          </div>
+        </article>
+      </div>
+    </section>
+    <div class="social-buttons">
+        <ul>
+          <li><a href="https://www.linkedin.com/in/david-lim-cs" target="_blank">linkedin</a></li>
+          <i class="fa-brands fa-buffer"></i>
+          <li><a href="https://github.com/dav1dddddddd" target="_blank">github</a></li>
+          <i class="fa-brands fa-buffer"></i>
+          <li><a href="https://www.instagram.com/davldlim" target="_blank">instagram</a></li>
+        </ul>
+    </div>
+    <script src="js/theme.js"></script>
+    <script src="js/scroll.js"></script>
+</body>
+</html>
