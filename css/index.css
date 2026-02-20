@@ -5,11 +5,6 @@
     box-sizing: border-box;
 }
 
-::-webkit-scrollbar {
-    display: none;
-}
-
-
 :root {
     --bg: #c8e6c9;
     --text: #1b5e20;
@@ -160,17 +155,62 @@ body.dark-theme .profile {
     box-shadow: 0 8px 24px rgba(197, 225, 197, 0.25);
 }
 
-.description {
+.desc-frame {
     position: fixed;
-    min-height: 30vh;
-    max-height: 35vh;
-    overflow-y: auto;
-    right: 27.5%;
-    top: 50%;
+    right: 23%;
+    top: 52.5%;
     transform: translate(10%, -50%);
+    z-index: 1;
+}
+
+.description {
+    min-height: 30vh;
+    max-height: 36vh;
+    padding-right: 4rem;
+    overflow-y: auto;
     font-size: clamp(1rem, 1.5vw, 1.75rem);
     text-align: center;
-    z-index: 1;
+    scrollbar-width: none;
+}
+
+.description::webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+
+.scroll {
+    position: absolute;
+    right: 0.75rem;
+    top: 14%;
+    bottom: 14%;
+    width: 0.55rem;
+    pointer-events: none;
+}
+
+.track {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    inset: 0;
+    border-radius: 999px;
+    background: rgba(0, 0, 0, 0.12);
+}
+
+.bar {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 20%;
+    border-radius: 999px;
+    background: var(--text);
+    transform: translateY(0);
+    transition: transform 0.08s linear;
+}
+
+body.dark-theme .track {
+    background: rgba(255, 255, 255, 0.14);
 }
 
 .description h1 {
@@ -203,9 +243,9 @@ body.dark-theme .profile {
 
 .reveal {
     opacity: 0;
-    transform: translateY(14px);
+    transform: translateY(20px);
     filter: blur(2px);
-    transition: opacity 0.65s ease, transform 650ms ease, filter 650ms ease;
+    transition: opacity 1s ease, transform 1s ease, filter 1s ease;
     will-change: opacity, transform, filter;
   }
 

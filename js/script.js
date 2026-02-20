@@ -3,6 +3,10 @@ document.addEventListener('DOMContentLoaded', function() {
     const themeIcon = document.getElementById('themeIcon');
     const body = document.body;
 
+    const desc = document.getElementById('desc');
+    const bar = document.getElementById('bar');
+    const track = document.getElementById('track');
+
     const paletteToggle = document.getElementById('paletteToggle');
     const palettePanel = document.getElementById('palettePanel');
     const paletteClose = document.getElementById('paletteClose');
@@ -106,6 +110,28 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }
     ];
+
+    function updateScroll() {
+        if (!desc || !bar || !track) return;
+      
+        const maxScroll = desc.scrollHeight - desc.clientHeight;
+      
+        if (maxScroll <= 0) {
+          bar.style.height = '100%';
+          bar.style.transform = 'translateY(0px)';
+          return;
+        }
+
+        const trackHeight = track.getBoundingClientRect().height;
+      
+        const barRatio = desc.clientHeight / desc.scrollHeight;
+        const barHeight = Math.max(trackHeight * barRatio, 24);
+        bar.style.height = `${barHeight}px`;
+      
+        const travel = trackHeight - barHeight;
+        const y = (desc.scrollTop / maxScroll) * travel;
+        bar.style.transform = `translateY(${y}px)`;
+      }
 
     function initReveal() {
         const revealEls = document.querySelectorAll('.reveal');
@@ -227,6 +253,9 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     initReveal();
+    updateScroll();
+    desc.addEventListener('scroll', updateScroll);
+    window.addEventListener('resize', updateScroll);
     renderSwatches();
     initTheme();
     applyThemeVars();
