@@ -109,18 +109,20 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function initReveal() {
         const revealEls = document.querySelectorAll('.reveal');
-  
+
         document.querySelectorAll('.reveal-stagger').forEach(group => {
             group.querySelectorAll('.reveal').forEach((el, idx) => {
                 el.style.setProperty('--i', idx);
             });
         });
-  
+
+        if (revealEls.length === 0) return;
+
         if (!('IntersectionObserver' in window)) {
             revealEls.forEach(el => el.classList.add('is-visible'));
             return;
         }
-  
+
         const io = new IntersectionObserver((entries, obs) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -129,7 +131,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             });
         }, { threshold: 0.15, rootMargin: '0px 0px -10% 0px' });
-  
+
         revealEls.forEach(el => io.observe(el));
     }
 
@@ -143,12 +145,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function getActivePaletteId() {
         return safeGetLocalStorage('palette') || 'green';
-    }
-
-    function setActivePaletteId(id) {
-        safeSetLocalStorage('palette', id);
-        renderSwatches();
-        applyThemeVars();
     }
 
     function getPaletteById(id) {
@@ -214,12 +210,12 @@ document.addEventListener('DOMContentLoaded', function() {
             btn.className = 'palette-swatch' + (p.id === activeId ? ' active' : '');
             btn.title = p.label;
             btn.setAttribute('aria-label', p.label);
-
-            // Show the light background color as the preview
             btn.style.background = p.light.bg;
 
             btn.addEventListener('click', function() {
-                setActivePaletteId(p.id);
+                safeSetLocalStorage('palette', p.id);
+                renderSwatches();
+                applyThemeVars();
             });
 
             paletteSwatches.appendChild(btn);
@@ -238,11 +234,13 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    if (paletteToggle) {
-        paletteToggle.addEventListener('click', function() {
+    if (paletteToggle && palettePanel) {
+        paletteToggle.addEventListener('click', function(e) {
+            e.stopPropagation();
             openPalettePanel(!palettePanel.classList.contains('open'));
         });
     }
+
     if (paletteClose) {
         paletteClose.addEventListener('click', function() {
             openPalettePanel(false);
