@@ -104,7 +104,103 @@ document.addEventListener('DOMContentLoaded', function() {
                 border: '#ffd0bd',
                 shadow: 'rgba(255, 226, 214, 0.18)'
             }
-        }
+        },
+        {
+            id: 'mono',
+            label: 'Mono',
+            light: {
+              bg: '#f5f5f5',
+              text: '#1a1a1a',
+              mutedText: 'rgba(26, 26, 26, 0.65)',
+              accent: '#6e6e6e',
+              toggleBg: '#1a1a1a',
+              toggleFg: '#f5f5f5',
+              border: '#1a1a1a',
+              shadow: 'rgba(0, 0, 0, 0.15)'
+            },
+            dark: {
+              bg: '#121212',
+              text: '#eaeaea',
+              mutedText: 'rgba(234, 234, 234, 0.70)',
+              accent: '#9a9a9a',
+              toggleBg: '#eaeaea',
+              toggleFg: '#121212',
+              border: '#dcdcdc',
+              shadow: 'rgba(255, 255, 255, 0.08)'
+            }
+          },
+          {
+            id: 'yellow',
+            label: 'Yellow',
+            light: {
+              bg: '#fff8dc',                 
+              text: '#7a5c00',              
+              mutedText: 'rgba(122, 92, 0, 0.65)',
+              accent: '#f4b400',             
+              toggleBg: '#7a5c00',
+              toggleFg: '#fff8dc',
+              border: '#e6c65c',
+              shadow: 'rgba(244, 180, 0, 0.25)'
+            },
+            dark: {
+              bg: '#2b2400',                
+              text: '#ffe48a',               
+              mutedText: 'rgba(255, 228, 138, 0.75)',
+              accent: '#ffd54f',
+              toggleBg: '#ffe48a',
+              toggleFg: '#2b2400',
+              border: '#ffdf70',
+              shadow: 'rgba(255, 213, 79, 0.18)'
+            }
+          },
+          {
+            id: 'pink',
+            label: 'Pink',
+            light: {
+              bg: '#ffeef5',                
+              text: '#7a2e4f',               
+              mutedText: 'rgba(122, 46, 79, 0.65)',
+              accent: '#e75480',             
+              toggleBg: '#7a2e4f',
+              toggleFg: '#ffeef5',
+              border: '#f3a8c2',
+              shadow: 'rgba(231, 84, 128, 0.22)'
+            },
+            dark: {
+              bg: '#2a0f1c',                  
+              text: '#ffc7de',                
+              mutedText: 'rgba(255, 199, 222, 0.75)',
+              accent: '#ff6fa8',
+              toggleBg: '#ffc7de',
+              toggleFg: '#2a0f1c',
+              border: '#ff9fc7',
+              shadow: 'rgba(255, 111, 168, 0.18)'
+            }
+          },
+          {
+            id: 'petrol',
+            label: 'Petrol',
+            light: {
+              bg: '#e6f4f4',               
+              text: '#0f3d3e',               
+              mutedText: 'rgba(15, 61, 62, 0.65)',
+              accent: '#008b8b',             
+              toggleBg: '#0f3d3e',
+              toggleFg: '#e6f4f4',
+              border: '#7fbcbc',
+              shadow: 'rgba(0, 139, 139, 0.25)'
+            },
+            dark: {
+              bg: '#081f1f',                
+              text: '#b9f3f3',                
+              mutedText: 'rgba(185, 243, 243, 0.75)',
+              accent: '#00c2c2',
+              toggleBg: '#b9f3f3',
+              toggleFg: '#081f1f',
+              border: '#4fd1d1',
+              shadow: 'rgba(0, 194, 194, 0.18)'
+            }
+          }
     ];
 
     function initReveal() {
