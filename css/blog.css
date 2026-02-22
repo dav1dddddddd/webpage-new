@@ -27,7 +27,7 @@ body {
     max-width: 100%;
     overflow-x: hidden;
     transition: background-color 0.3s ease, color 0.3s ease;
-    padding-bottom: 5rem; /* room for fixed socials */
+    padding-bottom: 5rem;
 }
 
 .theme-toggle {
@@ -102,7 +102,7 @@ body {
     left: 1.25rem;
     top: 5.75rem;
     width: 15.5rem;
-    max-height: 5rem;
+    max-height: 8.5rem;
     border-radius: 1.25rem;
     padding: 0.25rem 0.9rem 0.8rem;
     backdrop-filter: blur(10px);
@@ -174,7 +174,6 @@ body.dark-theme .palette-swatch {
     }
 }
 
-/* nav */
 .navigation-bar {
     position: relative;
     top: 1rem;
@@ -204,7 +203,6 @@ body.dark-theme .palette-swatch {
     transition: color 0.3s ease;
 }
 
-/* blog layout */
 .blog-page {
     width: min(820px, 92vw);
     margin: 4.5rem auto 6rem;
@@ -235,7 +233,6 @@ body.dark-theme .palette-swatch {
     padding-top: 0.25rem;
 }
 
-/* divider between posts */
 .blog-item + .blog-item {
     border-top: 1px solid rgba(0, 0, 0, 0.10);
     padding-top: 1.35rem;
