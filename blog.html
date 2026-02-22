@@ -1,1 +1,73 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="david lim's blog">
+    <link rel="stylesheet" href="css/blog.css">
+    <script src="https://kit.fontawesome.com/707024b310.js" crossorigin="anonymous"></script>
     <title>blog • david lim</title>
+</head>
+<body>
+    <button class="palette-toggle" id="paletteToggle">
+        <i class="fa-solid fa-palette"></i>
+    </button>
+    <aside class="palette-panel" id="palettePanel">
+        <div class="palette-header">
+        </div>
+        <div class="palette-swatches" id="paletteSwatches"></div>
+    </aside>
+    <button class="theme-toggle" id="themeToggle">
+        <i class="fa-solid fa-moon" id="themeIcon"></i>
+    </button>
+    <a href="mailto:contact@davidhopelim.com">
+        <button class="message" id="messageButton">
+            <i class="fa-solid fa-comment-dots"></i>
+        </button>
+    </a>
+
+    <div class="navigation-bar">
+        <nav>
+            <ul id="tab-list">
+                <li><a href="index.html">home</a></li>
+                <li><a href="projects.html">projects</a></li>
+                <li><a href="blog.html">blog</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <main class="blog-page">
+        <header class="blog-head reveal">
+            <h1>posts</h1>
+            <p>small thoughts i want to remember.</p>
+        </header>
+
+        <ul class="blog-list reveal-stagger">
+            <li class="blog-item reveal">
+                <div class="blog-meta">
+                    <time datetime="2026-02-22">Feb 22, 2026</time>
+                </div>
+
+                <h2 class="blog-title">
+                    <a href="html/potential.html" class="blog-link">potential</a>
+                </h2>
+
+                <p class="blog-excerpt">
+                    “you can't rush greatness... maybe”
+                </p>
+            </li>
+        </ul>
+    </main>
+
+    <div class="social-buttons">
+        <ul>
+            <li><a href="https://www.linkedin.com/in/david-lim-cs" target="_blank">linkedin</a></li>
+            <i class="fa-brands fa-buffer"></i>
+            <li><a href="https://github.com/dav1dddddddd" target="_blank">github</a></li>
+            <i class="fa-brands fa-buffer"></i>
+            <li><a href="https://www.instagram.com/davldlim" target="_blank">instagram</a></li>
+        </ul>
+    </div>
+
+    <script src="js/theme.js"></script>
+</body>
+</html>
