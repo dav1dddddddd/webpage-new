@@ -209,14 +209,14 @@ body.dark-theme .palette-swatch {
 }
 
 .blog-head h1 {
-    font-size: clamp(2rem, 4vw, 3rem);
+    font-size: clamp(2rem, 3.75vw, 4rem);
     letter-spacing: -0.02em;
     text-align: center;
 }
 
 .blog-head p {
-    margin-top: 0.6rem;
-    font-size: clamp(0.25rem, 1vw, 1.75rem);
+    margin-top: 1rem;
+    font-size: clamp(0.25rem, 1.1vw, 1.75rem);
     color: var(--muted-text);
     line-height: 1.45;
     text-align: center;
