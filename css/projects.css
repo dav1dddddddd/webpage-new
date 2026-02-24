@@ -172,7 +172,7 @@ body.dark-theme .navigation-bar li a:hover {
   
 .project-card {
     grid-column: span 6;
-    border: 1px solid rgba(0, 0, 0, 0.10);
+    border: 2px solid rgba(0, 0, 0, 0.10);
     border-radius: 1.25rem;
     padding: 1rem 1rem 0.4rem;
     background: rgba(255, 255, 255, 0.18);
@@ -183,7 +183,7 @@ body.dark-theme .navigation-bar li a:hover {
   
 body.dark-theme .project-card {
     background: rgba(0, 0, 0, 0.22);
-    border-color: rgba(255, 255, 255, 0.14);
+    border-color: rgba(255, 255, 255, 0.3);
     box-shadow: 0 10px 28px rgba(0, 0, 0, 0.35);
 }
   
@@ -193,7 +193,7 @@ body.dark-theme .project-card {
 }
   
 body.dark-theme .project-card:hover {
-    border-color: rgba(255, 255, 255, 0.22);
+    border-color: rgba(255, 255, 255, 0.35);
 }
   
 .project-top {
